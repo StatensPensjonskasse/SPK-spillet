@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+</head>
+
+<body onKeyDown={handleKeyDown}>
+
+
+    <div class="bane-container">
+
+        <div id="bane">
+
+            <div id="poeng">
+
+                <div id="plaster" class="skjult">
+                    <div class="beholdning_tittel">Antall plaster</div>
+                    <div class="beholdning_count" id="antallPlasterPlukket">0
+                    </div>
+                </div>
+
+                <div id="pensjonist" class="skjult">
+                    DU ER PENSJONIST! 👵
+                </div>
+
+                <div id="ufoer" class="skjult">
+                    <label id="erUfoer">Å NEI, DU ER UFØR! 🤕<br>Samle plastre og bli frisk</label>
+                </div>
+
+                <div id="kanBliPensjonist" class="skjult">
+                    Trykk på P for å gå av som pensjonist!
+                </div>
+
+                <div id="beholdning">
+                    <div class="beholdning_tittel">Opptjent Beholdning</div>
+                    <div class="beholdning_count">
+                        <span id="antallSpkronePlukket">0</span>
+                        <span>kr</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="meny_bunn">
+
+                <div id="din_alder">
+                    <div class="din_alder_tittel">Din alder</div>
+                    <div>
+                        <span id="alder"></span>
+                        <span>år</span>
+                    </div>
+                </div>
+
+
+                <div id="utbetaling" class="skjult">
+                    <div class="utbetaling_tittel">Utbetalt Pensjon</div>
+                    <div class="utbetaling_count">
+                        <span id="totalUtbetaltPensjon">0</span>
+                        <span>kr</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="bakgrunn"></div>
+            <div id="spiller">
+                <img src="assets/COMMON/runner_small.gif" />
+            </div>
+
+        </div>
+
+
+        <div id="spillover" class="skjult">
+            <div class="death_screen">
+                <img src="assets/COMMON/death_skjerm.png" />
+            </div>
+            <div class="donate-score">
+                <div id="spillover-score" style="margin-top: 40px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="start-vindu">
+
+        <div id="start-screen">
+            <img src="assets/COMMON/start_screen.png" />
+        </div>
+
+        <button id="start-knapp" class="eightbit-btn">
+        </button>
+
+    </div>
+</body>
+<footer>
+    <script src="main.js"></script>
+    <script src="spiller.js"></script>
+    <script src="spkrone.js"></script>
+    <script src="backgroun.js"></script>
+    <script src="hindring.js"></script>
+    <script src="plaster.js"></script>
+    <script src="utbetaling.js"></script>
+</footer>

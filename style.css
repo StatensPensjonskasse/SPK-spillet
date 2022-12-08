@@ -1,0 +1,490 @@
+body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bane-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.synshemning {
+    position: fixed;
+    filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#poeng {
+    width: calc(100% - 30px);
+    height: 40px;
+    background-size: 100%;
+    color: white;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 900;
+}
+
+#bane {
+    width: 800px;
+    height: 600px;
+    background-color: #51b4e6;
+    position: absolute;
+    background-size: 100%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#kanBliPensjonist {
+    position: absolute;
+    width: 100%;
+    bottom: 6px;
+    left: 0;
+    text-align: center;
+    z-index: 9999;
+}
+
+#pensjonist {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 2px solid;
+    background: #254db2;
+    font-weight: 900;
+}
+
+.spkrone {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: 0px;
+    z-index: 100;
+}
+
+.hindring {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    right: 0px;
+    bottom: 50px;
+    /* background-color: black; */
+    z-index: 100;
+}
+
+.hindring img {
+    width: 100%;
+}
+
+.plaster {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: 0px;
+    /* background-color: pink; */
+    z-index: 100;
+}
+
+#spillover {
+    /* position: absolute; */
+    /* width: 100%; */
+    /* height: 100%; */
+    top: 0;
+    left: 0;
+    z-index: 9999;    
+}
+
+#spillover::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.48);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.donate-score {
+    position: absolute;
+    color: white;
+    top: 270px;
+    text-align: center;
+    line-height: 2;
+    width: 100%;
+    left: 0;
+}
+
+:root{
+    --hopp-hoyde:400px;
+}
+
+.spiller-hopp {
+    bottom: var(--hopp-hoyde) !important;
+    transition: 0.6s ease-out !important;
+}
+
+#spiller {
+    height: 100px;
+    width: 30px;
+
+    position: absolute;
+    left: 100px;
+    bottom: 5px;
+
+    transition: 0.6s ease-in;
+
+    z-index: +100;
+    display: inline-block;
+    animation: bounce 0.1s ease infinite alternate;
+
+    text-shadow: 0 1px #ccc, 0 2px #ccc, 0 3px #ccc, 0 4px #ccc, 0 5px #ccc,
+        0 6px 0 transparent, 0 7px transparent, 0 8px transparent, 0 9px transparent,
+        0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.spiller-doed {
+    z-index: 99999;
+    position: absolute;
+    left: 118px;
+    bottom: 28px;
+}
+
+#spiller img {
+    width: 210%;
+    bottom: 20px;
+    position: relative;
+}
+
+.skjult {
+    opacity: 0;
+}
+
+
+
+@keyframes bounce {
+    100% {
+
+        text-shadow: 0 1px #ccc, 0 2px #ccc, 0 3px #ccc, 0 4px #ccc, 0 5px #ccc,
+            0 6px #ccc, 0 7px #ccc, 0 8px #ccc, 0 9px #ccc,
+            0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#spiller:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#spiller:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#spiller:nth-child(4) {
+    animation-delay: 1s;
+}
+
+#spiller:nth-child(5) {
+    animation-delay: 5s;
+}
+
+.ground_style {
+    width: 355px;
+    height: 55px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.background_style {
+    height: 481px;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+}
+
+.skyskraper_style {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+}
+
+
+
+.skyskraper_style {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    z-index: +100;
+}
+
+
+
+.running {
+    zoom: 200%;
+    --color: red;
+    --duration: .8s;
+    transform: scale(var(--scale, 1));
+}
+
+.running .outer {
+    -webkit-animation: outer var(--duration) linear infinite;
+    animation: outer var(--duration) linear infinite;
+}
+
+.running .outer .body {
+    background: var(--color);
+    height: 15px;
+    width: 8px;
+    border-radius: 4px;
+    transform-origin: 4px 11px;
+    position: relative;
+    transform: rotate(32deg);
+    -webkit-animation: body var(--duration) linear infinite;
+    animation: body var(--duration) linear infinite;
+}
+
+.running .outer .body:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    bottom: 16px;
+    left: 0;
+    position: absolute;
+    background: var(--color);
+}
+
+.running .outer .body .arm,
+.running .outer .body .arm:before,
+.running .outer .body .leg,
+.running .outer .body .leg:before {
+    content: "";
+    width: var(--w, 11px);
+    height: 4px;
+    top: var(--t, 0);
+    left: var(--l, 2px);
+    border-radius: 2px;
+    transform-origin: 2px 2px;
+    position: absolute;
+    background: var(--c, var(--color));
+    transform: rotate(var(--r, 0deg));
+    -webkit-animation: var(--name, arm-leg) var(--duration) linear infinite;
+    animation: var(--name, arm-leg) var(--duration) linear infinite;
+}
+
+.running .outer .body .arm:before {
+    --l: 7px;
+    --name: arm-b;
+}
+
+.running .outer .body .arm.front {
+    --r: 24deg;
+    --r-to: 164deg;
+}
+
+.running .outer .body .arm.front:before {
+    --r: -48deg;
+    --r-to: -36deg;
+}
+
+.running .outer .body .arm.behind {
+    --r: 164deg;
+    --r-to: 24deg;
+}
+
+.running .outer .body .arm.behind:before {
+    --r: -36deg;
+    --r-to: -48deg;
+}
+
+.running .outer .body .leg {
+    --w: 12px;
+    --t: 11px;
+}
+
+.running .outer .body .leg:before {
+    --t: 0;
+    --l: 8px;
+}
+
+.running .outer .body .leg.front {
+    --r: 10deg;
+    --r-to: 108deg;
+}
+
+.running .outer .body .leg.front:before {
+    --r: 18deg;
+    --r-to: 76deg;
+}
+
+.running .outer .body .leg.behind {
+    --r: 108deg;
+    --r-to: 10deg;
+    --c: none;
+}
+
+.running .outer .body .leg.behind:before {
+    --c: var(--color);
+    --r: 76deg;
+    --r-to: 18deg;
+}
+
+.running .outer .body .leg.behind:after {
+    content: "";
+    top: 0;
+    right: 0;
+    height: 4px;
+    width: 6px;
+    -webkit-clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+    clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+    border-radius: 0 2px 2px 0;
+    position: absolute;
+    background: var(--color);
+}
+
+#start-vindu {
+    z-index: 99999;
+    /* width: 800px;
+    height: 800px; */
+    background-color: rgba(0, 0, 0, 0.48);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#start-screen {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#start-knapp {
+    margin: 0;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+    border: none;
+}
+
+#start-knapp {
+    background: url("assets/COMMON/button.png");
+    background-repeat: no-repeat;
+    background-size: 200px 120px;
+    cursor: pointer;
+}
+
+#start-knapp:hover {
+    background: url("assets/COMMON/button_hover.png");
+} 
+
+#start-knapp:active {
+    background: url("assets/COMMON/button_active.png");
+} 
+
+#beholdning {
+    text-align: right;
+}
+
+.beholdning_tittel {}
+
+.beholdning_count {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#ufoer {
+    height: 80px;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 1px 27px;
+    transform: rotate(-6deg);
+    position: relative;
+    top: 40px;
+    background: rgb(239, 218, 16);
+    border-radius: 12px;
+    color: black;
+    font-weight: bold;
+    padding-top: 18px;
+}
+
+#meny_bunn {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 900;
+    text-shadow: -1px 1px 3px black;
+}
+
+#utbetaling {
+    padding: 14px;
+    text-align: right;
+}
+
+.utbetaling_count {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#din_alder {
+    padding: 15px;
+}
+
+.din_alder_tittel {}
+
+#alder {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin_rev {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
